@@ -1,13 +1,9 @@
 <template>
   <div
-    class="w-full h-[200px] bg-white flex justify-between place-items-center pr-[200px] pl-[200px]"
+    class="w-full h-[200px] bg-white flex justify-between place-items-center pr-wrapper-p pl-wrapper-p"
   >
-    <slot name="left">
-      <div class="w-[20px] h-20px">default</div>
-    </slot>
-    <slot name="right">
-      <div class="w-[20px] h-20px">default</div>
-    </slot>
+    <slot name="left"><div>default</div></slot>
+    <slot name="right"><div>default</div></slot>
   </div>
 </template>
 

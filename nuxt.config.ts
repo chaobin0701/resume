@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ["@/assets/css/tailwind.css", "@/assets/fonts/fonts.css"],
   app: {
     head: {
       meta: [

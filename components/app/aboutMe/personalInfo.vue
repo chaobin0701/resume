@@ -4,19 +4,13 @@
   >
     <public-c-mtitle text="大张伟"></public-c-mtitle>
     <div class="mt-[16px] relative space-x-[10%] flex">
-      <div class="item" v-for="(item, index) in 4" :key="index">
-        <p class="leading-[30px]">UI界面</p>
-        <p class="text-weakenColor text-[12px]">设计师</p>
+      <div class="item relative" v-for="(item, index) in personalDes" :key="index">
+        <p class="leading-[30px]">{{ item.text }}</p>
+        <p class="text-weakenColor text-[12px]">{{ item.des }}</p>
       </div>
     </div>
     <div class="mt-[50px] flex space-x-[20px]">
-      <div
-        class="border border-weakenColor pl-[25px] pr-[25px] text-[15px] rounded-full h-[30px] leading-[30px]"
-        v-for="(item, index) in 2"
-        :key="index"
-      >
-        首页 ->
-      </div>
+      <app-aboutMe-linkBtn v-for="(item,index) in links" :key="index" :link="item.link">{{ item.linkName }}</app-aboutMe-linkBtn>
     </div>
     <!-- 小圆点 -->
     <span
@@ -25,9 +19,40 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const personalDes = ref([
+  {
+    text: "UI界面",
+    des: "设计师",
+  },
+  {
+    text: "2年",
+    des: "平面设计经验",
+  },
+  {
+    text: "2年",
+    des: "实习经验",
+  },
+  {
+    text: "美术",
+    des: "专业出身",
+  },
+]);
+const links = [
+  {
+    linkName: "Github",
+    link: "#",
+  },
+  {
+    linkName: "掘金主页",
+    link: "#",
+  },
+];
+</script>
 
 <style scoped>
-/* name装饰 */
-
+/* 个人标签伪元素 */
+.item::before {
+  @apply subscript-pInfo;
+}
 </style>
