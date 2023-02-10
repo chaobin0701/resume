@@ -4,13 +4,22 @@
   >
     <public-c-mtitle text="大张伟"></public-c-mtitle>
     <div class="mt-[16px] relative space-x-[10%] flex">
-      <div class="item relative" v-for="(item, index) in personalDes" :key="index">
+      <div
+        class="item relative"
+        v-for="(item, index) in personalDes"
+        :key="index"
+      >
         <p class="leading-[30px]">{{ item.text }}</p>
         <p class="text-weakenColor text-[12px]">{{ item.des }}</p>
       </div>
     </div>
     <div class="mt-[50px] flex space-x-[20px]">
-      <app-aboutMe-linkBtn v-for="(item,index) in links" :key="index" :link="item.link">{{ item.linkName }}</app-aboutMe-linkBtn>
+      <app-aboutMe-linkBtn
+        v-for="(item, index) in links"
+        :key="index"
+        :link="item.link"
+        >{{ item.linkName }}</app-aboutMe-linkBtn
+      >
     </div>
     <!-- 小圆点 -->
     <span
@@ -54,5 +63,21 @@ const links = [
 /* 个人标签伪元素 */
 .item::before {
   @apply subscript-pInfo;
+}
+/* 框 */
+.userInfo-1 {
+  transform-style: preserve-3d;
+}
+.userInfo-1::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  top: -3px;
+  right: -3px;
+  border-radius: 2px;
+  transform: translateZ(-1px);
 }
 </style>

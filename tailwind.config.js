@@ -23,7 +23,9 @@ module.exports = {
         // 黄色
         pYellow: "rgb(250,249,238)",
         // 棕色
-        pBrown: "rgb(243,233,2233)",
+        pBrown: "rgb(243,233,223)",
+        // 深棕色
+        pDarkBrown: "rgb(51,51,51)",
         // 灰色
         pGrey: "rgb(245,245,245)",
       },

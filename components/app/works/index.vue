@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-[200px]">
+  <div class="">
     <public-c-bg>
       <public-c-title text="相知" des="About Me"></public-c-title>
     </public-c-bg>

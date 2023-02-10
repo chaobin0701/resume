@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-const tags = ["爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游"];
+const tags = ["爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游","爱旅游","爱旅游"];
 const oddTags = ref([]);
 const evenTages = ref([]);
 tags.forEach((tag, index) => {
