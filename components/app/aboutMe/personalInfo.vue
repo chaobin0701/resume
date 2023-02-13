@@ -2,11 +2,11 @@
   <div
     class="userInfo-1 w-[500px] h-[300px] bg-white border border-weakenColor rounded-md relative box-border p-[20px] flex flex-col justify-around"
   >
-    <public-c-mtitle text="大张伟"></public-c-mtitle>
+    <public-c-mtitle :text="name"></public-c-mtitle>
     <div class="mt-[16px] relative space-x-[10%] flex">
       <div
         class="item relative item-1"
-        v-for="(item, index) in personalDes"
+        v-for="(item, index) in explains"
         :key="index"
       >
         <p class="leading-7">{{ item.text }}</p>
@@ -28,35 +28,12 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const personalDes = ref([
-  {
-    text: "UI界面",
-    des: "设计师",
-  },
-  {
-    text: "2年",
-    des: "平面设计经验",
-  },
-  {
-    text: "2年",
-    des: "实习经验",
-  },
-  {
-    text: "美术",
-    des: "专业出身",
-  },
-]);
-const links = [
-  {
-    linkName: "Github",
-    link: "#",
-  },
-  {
-    linkName: "掘金主页",
-    link: "#",
-  },
-];
+<script setup>
+const props = defineProps({
+ name:String,
+ links:Array,
+ explains:Array
+})
 </script>
 
 <style scoped>

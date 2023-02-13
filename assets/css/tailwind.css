@@ -30,4 +30,21 @@
   .vertical-rl {
     writing-mode: vertical-rl;
   }
+
+  /* 延迟 */
+  .animation-200 {
+    animation-delay: 200ms !important;
+  }
+  .animation-300 {
+    animation-delay: 300ms !important;
+  }
+  .animation-500 {
+    animation-delay: 500ms !important;
+  }
+  .animation-700 {
+    animation-delay: 700ms !important;
+  }
+  .animation-1000 {
+    animation-delay: 1000ms !important;
+  }
 }

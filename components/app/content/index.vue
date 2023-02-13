@@ -1,6 +1,6 @@
 <template>
   <!-- 技能卡 -->
-  <public-c-nav id="point-2">
+  <public-c-nav id="point-2" class="d-point">
     <template #left>
       <public-c-mtitle text="技能卡"></public-c-mtitle>
     </template>
@@ -14,7 +14,7 @@
   <app-content-mySkills></app-content-mySkills>
 
   <!-- 校园经历 -->
-  <public-c-nav id="point-3">
+  <public-c-nav id="point-3" class="d-point">
     <template #left>
       <public-c-mtitle text="校园经历"></public-c-mtitle>
     </template>
@@ -28,7 +28,7 @@
   <app-content-campusLife></app-content-campusLife>
 
   <!-- 工作经历 -->
-  <public-c-nav id="point-4">
+  <public-c-nav id="point-4" class="d-point">
     <template #left>
       <public-c-mtitle text="工作经验"></public-c-mtitle>
     </template>

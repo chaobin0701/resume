@@ -1,7 +1,8 @@
 <template>
   <div
-    class="w-full flex flex-col items-center justify-center mb-[100px]"
+    class="w-full flex flex-col items-center justify-center mb-[100px] d-point"
     id="point-6"
+
   >
     <!-- 标题 -->
     <public-c-nav>

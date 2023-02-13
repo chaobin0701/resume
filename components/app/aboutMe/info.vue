@@ -5,20 +5,15 @@
       class="h-full w-[30%] bg-pBlue grid grid-rows-6 grid-cols-2 justify-center items-center p-[50px] text-center"
     >
       <public-c-mtitle
-        text="求职方向"
+        :text="jobOrientation.cTitle"
         class="row-span-3 col-span-2"
+        v-into="'focus-in-expand'"
       ></public-c-mtitle>
-      <div>
-        <p class="text-xl font-bold">UI界面</p>
-        <span class="text-xs text-weakenColor">设计师</span>
-      </div>
-      <div>
-        <p class="text-xl font-bold">平面视觉</p>
-        <span class="text-xs text-weakenColor">设计师</span>
-      </div>
-      <div>
-        <p class="text-xl font-bold">Java工程师</p>
-        <span class="text-xs text-weakenColor">程序员</span>
+      <div class="animation-300" v-into="'fade-in-down'"
+      v-for="(item,index) in jobOrientation.info" :key="index"
+      >
+        <p class="text-xl font-bold">{{ item.jobName }}</p>
+        <span class="text-xs text-weakenColor">{{item.jobDes}}</span>
       </div>
     </div>
     <!-- 右边内容区 -->
@@ -26,11 +21,17 @@
       <!-- 基本信息 -->
       <div class="grid grid-rows-6 grid-cols-2 justify-center items-center">
         <public-c-mtitle
-          text="基本信息"
+          :text="basicInfo.cTitle"
           class="col-span-2 row-span-3 title relative"
+          v-into="'focus-in-expand'"
         ></public-c-mtitle>
 
-        <div v-for="(info, index) in infos" :key="index" class="mr-[30px]">
+        <div
+          v-for="(info, index) in basicInfo.info"
+          :key="index"
+          class="mr-[30px] animation-500"
+          v-into="'fade-in-down'"
+        >
           <span class="text-weakenColor text-xs">{{ info.key }}</span>
           <p class="">{{ info.value }}</p>
         </div>
@@ -39,13 +40,15 @@
       <!-- 联系我 -->
       <div class="grid grid-rows-6 justify-center items-center">
         <public-c-mtitle
-          text="联系我"
+          :text="contactInformation.cTitle"
           class="row-span-3 title relative"
+          v-into="'focus-in-expand'"
         ></public-c-mtitle>
         <div
-          v-for="(info, index) in contactInfo"
+          v-for="(info, index) in contactInformation.info"
           :key="index"
-          class="mr-[30px]"
+          class="mr-[30px] animation-500"
+          v-into="'fade-in-down'"
         >
           <span class="text-weakenColor text-xs">{{ info.key }}</span>
           <p class="">{{ info.value }}</p>
@@ -56,36 +59,68 @@
 </template>
 
 <script setup lang="ts">
-const infos = [
-  { key: "毕业学校", value: "XX理工学校" },
-  { key: "专业", value: "产品设计" },
-  { key: "学历", value: "普通本科" },
-  { key: "出生年月", value: "1999.01.01" },
-  { key: "籍贯", value: "福建省泉州市" },
-  { key: "现居地", value: "福建省泉州市" },
-  // {
-  //   university: "XX理工学校",
-  //   major: "产品设计,",
-  //   education: "普通本科",
-  //   dateOfBirth: "1999.01.01",
-  //   nativePlace: "福建省泉州市",
-  //   currentResidence: "福建省厦门市",
-  // },
-];
-const contactInfo = [
-  { key: "联系电话", value: "13626090XXX" },
-  { key: "QQ", value: "837076176" },
-  { key: "邮箱", value: "837076176@qq.com" },
-  // {
-  //   phoneNumber: "13626090XXX",
-  //   QQ: "837076176",
-  //   email: "837076176@qq.com",
-  // },
-];
+const props = defineProps({
+  //基础信息
+  basicInfo:Object,
+   // 求职方向
+   jobOrientation:Object,
+   // 个人联系信息
+   contactInformation: Object
+})
 </script>
 
 <style scoped>
 .title::before {
   @apply subscript-pInfo1;
+}
+.focus-in-expand {
+  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.fade-in-down {
+  -webkit-animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 </style>

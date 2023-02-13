@@ -1,5 +1,5 @@
 <template>
-  <div id="point-5">
+  <div id="point-5" class="d-point">
     <public-c-bg>
       <public-c-title text="相知" des="About Me"></public-c-title>
     </public-c-bg>
@@ -8,7 +8,7 @@
       <template #left>
         <public-c-mtitle text="XXX作品"></public-c-mtitle>
       </template>
-      作品展示
+
       <template #right>
         <public-c-sectionTitle
           :texts="['WORKS.', 'DISPLAY.']"

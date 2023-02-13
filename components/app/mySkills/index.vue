@@ -1,4 +1,15 @@
 <template>
+  <!-- 技能卡 -->
+  <public-c-nav id="point-2" class="d-point">
+    <template #left>
+      <public-c-mtitle text="技能卡"></public-c-mtitle>
+    </template>
+    <template #right>
+      <public-c-sectionTitle
+        :texts="['My.', 'SKILLS.']"
+      ></public-c-sectionTitle>
+    </template>
+  </public-c-nav>
   <div class="w-full pr-wrapper-p pl-wrapper-p flex justify-around">
     <!-- 技巧 -->
     <div class="grid grid-cols-2 grid-rows-4 flex-1 h-[300px]">
@@ -10,14 +21,14 @@
     <!-- 能力 -->
     <div class="grid grid-cols-2 grid-rows-4 flex-1">
       <div class="col-span-2"><p class="title relative font-bold">能力</p></div>
-      <div class="mr-[30px]" v-for="(ability,index) in abilitys" :key="index">
-        <span class="text-weakenColor text-xs">{{ability.explain}}</span>
-        <p class="">{{ability.des}}</p>
+      <div class="mr-[30px]" v-for="(ability, index) in abilitys" :key="index">
+        <span class="text-weakenColor text-xs">{{ ability.explain }}</span>
+        <p class="">{{ ability.des }}</p>
       </div>
     </div>
   </div>
 </template>
-<script setup lang="ts">
+<script setup>
 const skillsLevel = [
   { skillsName: "Photoshop", level: 100 },
   { skillsName: "Vue", level: 80 },
