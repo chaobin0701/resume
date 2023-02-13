@@ -32,6 +32,22 @@ module.exports = {
       spacing: {
         "wrapper-p": "15%", //外层的padding大小
       },
+      animation: {
+        arrow: 'arrow .8s infinite',
+       },
+      keyframes: {
+        // 箭头运动动画
+        arrow: {
+          "0%,100%": {
+            transform: "translateX(0)",
+            "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateX(15%)",
+            "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      }
     },
   },
   plugins: [],

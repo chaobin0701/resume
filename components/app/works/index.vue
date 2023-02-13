@@ -1,9 +1,9 @@
 <template>
-  <div class="">
+  <div id="point-5">
     <public-c-bg>
       <public-c-title text="相知" des="About Me"></public-c-title>
     </public-c-bg>
-    <!-- 作品-大幅 -->
+    <!-- 作品 -->
     <public-c-nav>
       <template #left>
         <public-c-mtitle text="XXX作品"></public-c-mtitle>
@@ -16,12 +16,27 @@
       </template>
     </public-c-nav>
     <div
-      class="pr-wrapper-p pl-wrapper-p w-full flex flex-col items-center justify-center space-y-[100px]"
+      class="pr-wrapper-p pl-wrapper-p w-full flex flex-col items-center justify-around space-y-[100px]"
     >
       <!-- 项目1 -->
       <div class="w-full h-[300px] flex items-center justify-between">
         <!-- 图片区域 -->
-        <div class="h-full w-[70%] bg-pBlue"></div>
+        <div class="h-full w-[70%] bg-pBlue">
+          <div class="w-[50%] h-full p-[2.4%] inline-block">
+            <img
+              class="h-full w-full inline-block shadow-sm"
+              src="https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png"
+              alt=""
+            />
+          </div>
+          <div class="w-[50%] h-full p-[2.4%] inline-block">
+            <img
+              class="h-full w-full inline-block shadow-sm"
+              src="https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png"
+              alt=""
+            />
+          </div>
+        </div>
         <!-- 装饰 -->
         <div
           class="w-[120px] text-center h-full flex justify-center items-center"
@@ -38,7 +53,7 @@
         <!-- 文字描述 -->
         <div class="flex-1 flex flex-col justify-around h-full tracking-[3px]">
           <h3 class="text-[22px] font-bold text-center">XXXXXXXXX项目</h3>
-          <p class="text-[14px] text-weakenColor">
+          <p class="text-sm text-weakenColor">
             这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明
           </p>
           <p>使用技术:XXXXXX、XXXXXX</p>
@@ -49,7 +64,7 @@
         <!-- 文字描述 -->
         <div class="flex-1 flex flex-col justify-around h-full tracking-[3px]">
           <h3 class="text-[22px] font-bold text-center">XXXXXXXXX项目</h3>
-          <p class="text-[14px] text-weakenColor">
+          <p class="text-sm text-weakenColor">
             这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明
           </p>
           <p>使用技术:XXXXXX、XXXXXX</p>
@@ -68,7 +83,22 @@
           </div>
         </div>
         <!-- 图片区域 -->
-        <div class="h-full w-[70%] bg-pBlue"></div>
+        <div class="h-full w-[70%] bg-pBlue">
+          <div class="w-[50%] h-full p-[2.4%] inline-block">
+            <img
+              class="h-full w-full inline-block shadow-sm"
+              src="https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png"
+              alt=""
+            />
+          </div>
+          <div class="w-[50%] h-full p-[2.4%] inline-block">
+            <img
+              class="h-full w-full inline-block shadow-sm"
+              src="https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

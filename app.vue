@@ -8,6 +8,7 @@
     <app-footer></app-footer>
   </div>
 </template>
-<script setup></script>
+<script setup>
+</script>
 
 <style></style>

@@ -4,7 +4,7 @@
     v-for="(s, index) in skillsLevels"
     :key="index"
   >
-    <span class="text-[14px] leading-[30px]">{{ s.skillsName }}</span>
+    <span class="text-sm leading-7">{{ s.skillsName }}</span>
     <div class="w-fill h-[6px] relative">
       <li
         class="absolute w-full h-full rounded-full border border-gray-900 bg-gray-300 list-none"

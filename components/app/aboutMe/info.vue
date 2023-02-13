@@ -2,12 +2,23 @@
   <div class="w-[60%] h-[600px] mt-[40px] flex">
     <!-- 左边内容区 -->
     <div
-      class="h-full w-[30%] bg-pBlue grid grid-rows-6 justify-center items-center p-[50px]"
+      class="h-full w-[30%] bg-pBlue grid grid-rows-6 grid-cols-2 justify-center items-center p-[50px] text-center"
     >
-      <public-c-mtitle text="求职方向" class="row-span-3"></public-c-mtitle>
-      <div class="text-left text-[20px] space-y-[10px] occupation">
-        <p>UI界面</p>
-        <p>平面视觉</p>
+      <public-c-mtitle
+        text="求职方向"
+        class="row-span-3 col-span-2"
+      ></public-c-mtitle>
+      <div>
+        <p class="text-xl font-bold">UI界面</p>
+        <span class="text-xs text-weakenColor">设计师</span>
+      </div>
+      <div>
+        <p class="text-xl font-bold">平面视觉</p>
+        <span class="text-xs text-weakenColor">设计师</span>
+      </div>
+      <div>
+        <p class="text-xl font-bold">Java工程师</p>
+        <span class="text-xs text-weakenColor">程序员</span>
       </div>
     </div>
     <!-- 右边内容区 -->
@@ -19,9 +30,9 @@
           class="col-span-2 row-span-3 title relative"
         ></public-c-mtitle>
 
-        <div v-for="(info,index) in infos" :key="index" class="mr-[30px]">
-          <span class="text-weakenColor text-[12px]">{{info.key}}</span>
-          <p class="">{{info.value}}</p>
+        <div v-for="(info, index) in infos" :key="index" class="mr-[30px]">
+          <span class="text-weakenColor text-xs">{{ info.key }}</span>
+          <p class="">{{ info.value }}</p>
         </div>
       </div>
 
@@ -31,9 +42,13 @@
           text="联系我"
           class="row-span-3 title relative"
         ></public-c-mtitle>
-        <div v-for="(info,index) in contactInfo" :key="index" class="mr-[30px]">
-          <span class="text-weakenColor text-[12px]">{{ info.key }}</span>
-          <p class="">{{info.value}}</p>
+        <div
+          v-for="(info, index) in contactInfo"
+          :key="index"
+          class="mr-[30px]"
+        >
+          <span class="text-weakenColor text-xs">{{ info.key }}</span>
+          <p class="">{{ info.value }}</p>
         </div>
       </div>
     </div>

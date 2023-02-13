@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[60px] pr-wrapper-p pl-wrapper-p flex text-weakenColor text-[14px] justify-between items-center bg-pGrey">
+  <div class="w-full h-[60px] pr-wrapper-p pl-wrapper-p flex text-weakenColor text-sm justify-between items-center bg-pGrey">
     <!-- 备案信息 -->
     <span>@Copyright qingbin Website 2018 </span>
     <!-- 日期 -->

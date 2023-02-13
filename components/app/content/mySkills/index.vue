@@ -11,7 +11,7 @@
     <div class="grid grid-cols-2 grid-rows-4 flex-1">
       <div class="col-span-2"><p class="title relative font-bold">能力</p></div>
       <div class="mr-[30px]" v-for="(ability,index) in abilitys" :key="index">
-        <span class="text-weakenColor text-[12px]">{{ability.explain}}</span>
+        <span class="text-weakenColor text-xs">{{ability.explain}}</span>
         <p class="">{{ability.des}}</p>
       </div>
     </div>

@@ -4,7 +4,7 @@
   >
     <h2 class="font-bold">{{ text }}</h2>
     <span class="w-[20px] h-[2px] bg-white rounded-sm"></span>
-    <p class="text-[14px]">{{ des }}</p>
+    <p class="text-sm">{{ des }}</p>
   </div>
 </template>
 

@@ -5,12 +5,12 @@
     <public-c-mtitle text="大张伟"></public-c-mtitle>
     <div class="mt-[16px] relative space-x-[10%] flex">
       <div
-        class="item relative"
+        class="item relative item-1"
         v-for="(item, index) in personalDes"
         :key="index"
       >
-        <p class="leading-[30px]">{{ item.text }}</p>
-        <p class="text-weakenColor text-[12px]">{{ item.des }}</p>
+        <p class="leading-7">{{ item.text }}</p>
+        <p class="text-weakenColor text-xs">{{ item.des }}</p>
       </div>
     </div>
     <div class="mt-[50px] flex space-x-[20px]">
@@ -79,5 +79,21 @@ const links = [
   right: -3px;
   border-radius: 2px;
   transform: translateZ(-1px);
+}
+
+/* 动画 */
+.item-1 {
+  animation: identifier1 1.5s;
+  
+}
+@keyframes identifier1 {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 </style>

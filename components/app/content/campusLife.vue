@@ -5,10 +5,10 @@
       class="w-[45%] bg-pBlue rounded-[10px] p-[30px] grid grid-rows-4 grid-cols-3"
     >
       <div class="col-span-3">
-        <p class="relative text-[18px] font-bold title">在校成绩</p>
+        <p class="relative text-lg font-bold title">在校成绩</p>
       </div>
       <div class="mr-[30px]" v-for="(score, index) in scores" :key="index">
-        <span class="text-weakenColor text-[12px]">{{ score.des }}</span>
+        <span class="text-weakenColor text-xs">{{ score.des }}</span>
         <p class="font-bold">{{ score.explain }}</p>
 
       </div>
@@ -18,16 +18,16 @@
       class="w-[45%] bg-pYellow rounded-[10px] p-[30px] grid grid-rows-4 grid-cols-2"
     >
       <div class="col-span-2">
-        <p class="relative text-[18px] font-bold title">获得荣誉</p>
+        <p class="relative text-lg font-bold title">获得荣誉</p>
       </div>
       <div class="mr-[30px] row-span-3">
-        <span class="text-weakenColor text-[12px]">{{campusAwards.des}}</span>
+        <span class="text-weakenColor text-xs">{{campusAwards.des}}</span>
         <ul class="space-y-[30px] mt-[10px]">
           <li class="font-bold" v-for="(item,index) in campusAwards.explain" :key="index">{{ item}}</li>
         </ul>
       </div>
       <div class="mr-[30px] row-span-3">
-        <span class="text-weakenColor text-[12px]">{{competitionAwards.des}}</span>
+        <span class="text-weakenColor text-xs">{{competitionAwards.des}}</span>
         <ul class="space-y-[30px] mt-[10px]">
           <li class="font-bold" v-for="(item,index) in competitionAwards.explain" :key="index">{{ item}}</li>
         </ul>

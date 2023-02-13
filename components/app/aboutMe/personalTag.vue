@@ -1,15 +1,16 @@
 <template>
   <div
-    class="w-[600px] h-[300px] relative grid grid-cols-4 grid-rows-4 grid-flow-col items-center justify-items-center pl-[50px] pr-[50px] text-weakenColor"
+    class="w-[600px] h-[300px] relative grid grid-cols-4 grid-rows-4 grid-flow-col items-center justify-items-center text-weakenColor select-none"
   >
     <!-- 左边标签 -->
     <div
       v-for="(tag, index) in oddTags"
       :key="index"
-      :class="{ '-translate-x-[20px] ': index === 1 || index === 2 }"
+      :class="{ '-translate-x-[40px] ': index === 1 || index === 2 }"
+      class="group"
     >
       <span
-        class="block border border-blue-200 pr-[25px] pl-[25px] leading-[30px] rounded-full"
+        class="cursor-pointer block border border-blue-200 pr-[25px] pl-[25px] leading-7 rounded-full group-hover:border-blue-400 group-hover:bg-blue-100 group-hover:text-black duration-300"
         >{{ tag }}</span
       >
     </div>
@@ -22,10 +23,11 @@
     <div
       v-for="(tag, index) in evenTages"
       :key="index"
-      :class="{ 'translate-x-[20px] ': index === 1 || index === 2 }"
+      :class="{ 'translate-x-[40px] ': index === 1 || index === 2 }"
+      class="group"
     >
       <span
-        class="block border  border-pink-200 pr-[25px] pl-[25px] leading-[30px] rounded-full"
+        class="cursor-pointer block border border-pink-200 pr-[25px] pl-[25px] leading-7 rounded-full group-hover:border-pink-400 group-hover:bg-pink-100 group-hover:text-black duration-300"
         >{{ tag }}</span
       >
     </div>
@@ -33,7 +35,16 @@
 </template>
 
 <script setup lang="ts">
-const tags = ["爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游", "爱旅游","爱旅游","爱旅游"];
+const tags = [
+  "沉稳型",
+  "强迫症",
+  "爱读书",
+  "爱旅游",
+  "爱开发",
+  "技术控",
+  "数码迷",
+  "完美主义者",
+];
 const oddTags = ref([]);
 const evenTages = ref([]);
 tags.forEach((tag, index) => {

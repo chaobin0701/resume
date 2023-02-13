@@ -3,39 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 伪元素下标提取类 */
 @layer utilities {
-  /* 1.Header部分 */
+  /* header组件的伪元素标签 */
   .subscript-header {
     @apply w-[12px] h-[3px] bottom-[-10px] bg-black block absolute  left-1/2 -translate-x-1/2;
     content: "";
   }
-}
-@layer utilities {
   /* 2.个人介绍 */
   .subscript-pInfo {
     @apply w-[10px] h-[3px] bottom-[-20px] bg-black block absolute;
     content: "";
   }
-}
-
-@layer utilities {
   /* 3.基本信息 and 联系我 */
   .subscript-pInfo1 {
     @apply w-[40px] h-[4px] bottom-[-25px] bg-black block absolute;
     content: "";
   }
-}
 
-@layer utilities {
   /* 3.技能卡部分 */
   .subscript-skills {
     @apply w-[12px] h-[3px] bottom-[-10px] bg-black block absolute;
     content: "";
   }
-}
 
-@layer utilities {
   /* 垂直文字 */
   .vertical-rl {
     writing-mode: vertical-rl;
