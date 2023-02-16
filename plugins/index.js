@@ -1,5 +1,4 @@
 import { defineNuxtPlugin } from "#app";
-import { isArray } from "@vue/shared";
 // 自定义指令
 const defineDirective = (app) => {
   /**

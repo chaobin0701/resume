@@ -3,8 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 伪元素标签设置 */
 @layer utilities {
-  /* header组件的伪元素标签 */
+  /* header组件 */
   .subscript-header {
     @apply w-[12px] h-[3px] bottom-[-10px] bg-black block absolute  left-1/2 -translate-x-1/2;
     content: "";
@@ -25,26 +26,151 @@
     @apply w-[12px] h-[3px] bottom-[-10px] bg-black block absolute;
     content: "";
   }
-
   /* 垂直文字 */
   .vertical-rl {
     writing-mode: vertical-rl;
   }
-
-  /* 延迟 */
+}
+/* aniamtion延迟 */
+@layer utilities {
+  .animation-100 {
+    animation-delay: 100ms !important;
+  }
   .animation-200 {
     animation-delay: 200ms !important;
   }
   .animation-300 {
     animation-delay: 300ms !important;
   }
+  .animation-400 {
+    animation-delay: 400ms !important;
+  }
   .animation-500 {
     animation-delay: 500ms !important;
+  }
+  .animation-600 {
+    animation-delay: 600ms !important;
   }
   .animation-700 {
     animation-delay: 700ms !important;
   }
+  .animation-800 {
+    animation-delay: 800ms !important;
+  }
+  .animation-900 {
+    animation-delay: 800ms !important;
+  }
   .animation-1000 {
     animation-delay: 1000ms !important;
+  }
+}
+
+/* animation动画设置 */
+@layer utilities {
+  .focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .fade-in-right {
+    -webkit-animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .fade-in-down {
+    -webkit-animation: fade-in-down 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: fade-in-down 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @apply animation-300;
+  }
+  .fade-in-top {
+    -webkit-animation: fade-in-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: fade-in-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @apply animation-300;
+  }
+
+  .level-change {
+    animation: level 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    transform-origin: 0% 0%;
+    @apply animation-300;
+  }
+  .opacity {
+    animation: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @apply animation-300;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0%, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes level {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }

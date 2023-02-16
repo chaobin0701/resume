@@ -1,4 +1,5 @@
-import myInfo from "@/mock/myInfo.js";
+import myInfo from "@/public/mock/myInfo"
+
 export default (req, res) => {
   return myInfo;
 };

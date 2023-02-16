@@ -3,11 +3,11 @@ module.exports = {
   content: [],
   theme: {
     fontFamily: {
-      sans: ["albb"],
-      serif: ["albb"],
-      mono: ["albb"],
-      display: ["albb"],
-      body: ["albb"],
+      sans: ["Calibri"],
+      serif: ["Calibri"],
+      mono: ["Calibri"],
+      display: ["Calibri"],
+      body: ["Calibri"],
     },
     extend: {
       backgroundImage: {

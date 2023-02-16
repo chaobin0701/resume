@@ -2,7 +2,6 @@
   <div
     class="w-full flex flex-col items-center justify-center mb-[100px] d-point"
     id="point-6"
-
   >
     <!-- 标题 -->
     <public-c-nav>
@@ -62,17 +61,18 @@ const formData = reactive({
   email: "",
 });
 const subInfo = async () => {
-  const result = await useFetch(`${window.location.hostname}/contact`, {
+  
+  const result = await useFetch(`/api/contact`, {
     method: "post",
     body: {
-      name:formData.name,
-      phoneNumber:formData.phoneNumber,
-      company:formData.company,
-      email:formData.email,
+      name: formData.name,
+      phoneNumber: formData.phoneNumber,
+      company: formData.company,
+      email: formData.email,
     },
   });
 
-  console.log("结果",result)
+  console.log("结果", result);
 };
 </script>
 

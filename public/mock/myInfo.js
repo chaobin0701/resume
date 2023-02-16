@@ -89,48 +89,60 @@ export default {
   skills: {
     title: "我的技能", //大标题
     // 技能描述
-    skillsLevel: [
-      { skillsName: "Photoshop", level: 100 },
-      { skillsName: "Vue", level: 80 },
-      { skillsName: "React", level: 60 },
-      { skillsName: "C#", level: 50 },
-      { skillsName: "java", level: 40 },
-    ],
+    skillsLevel: {
+      cTitle: "技巧",
+      info: [
+        { skillsName: "Photoshop", level: 100 },
+        { skillsName: "Vue", level: 80 },
+        { skillsName: "React", level: 60 },
+        { skillsName: "C#", level: 50 },
+        { skillsName: "java", level: 40 },
+      ],
+    },
     // 能力描述
-    abilitys: [
-      { explain: "工作经验", des: "两年半前端开发经验" },
-      { explain: "熟悉", des: "前后端分离开发模式" },
-      { explain: "熟悉", des: "Vue全家开发" },
-      { explain: "熟悉", des: "HTML,CSS标签" },
-      { explain: "了解", des: "Node.js、React.js..." },
-    ],
+    abilitys: {
+      cTitle: "能力",
+      info: [
+        { explain: "工作经验", des: "两年半前端开发经验" },
+        { explain: "熟悉", des: "前后端分离开发模式" },
+        { explain: "熟悉", des: "Vue全家开发" },
+        { explain: "熟悉", des: "HTML,CSS标签" },
+        { explain: "了解", des: "Node.js、React.js..." },
+      ],
+    },
   },
   // 校园经历
   campusExperience: {
     title: "校园经历",
     // 在校成绩
-    scores: [
-      { des: "专业排名", explain: "第四" },
-      { des: "四级成绩", explain: "5XX" },
-      { des: "六级成绩", explain: "4XX" },
-      { des: "专业课成绩", explain: "优秀" },
-      { des: "手工课成绩", explain: "优秀" },
-    ],
-    // 在校成绩
-    campusAwards: {
-      des: "校园奖项",
-      explain: ["社会实践先进个人", "优秀学生干部", "三好学生"],
+    scores: {
+      cTitle: "在校成绩",
+      info: [
+        { des: "专业排名", explain: "第四" },
+        { des: "四级成绩", explain: "5XX" },
+        { des: "六级成绩", explain: "4XX" },
+        { des: "专业课成绩", explain: "优秀" },
+        { des: "手工课成绩", explain: "优秀" },
+      ],
     },
-    // 获得荣誉
-    competitionAwards: {
-      des: "比赛奖项",
-      explain: ["某某比赛三等奖", "某某比赛三等奖", "某某比赛三等奖"],
+    honor: {
+      cTitle: "获得荣誉",
+      // 在校成绩
+      campusAwards: {
+        des: "校园奖项",
+        explain: ["社会实践先进个人", "优秀学生干部", "三好学生"],
+      },
+      // 获得荣誉
+      competitionAwards: {
+        des: "比赛奖项",
+        explain: ["某某比赛三等奖", "某某比赛三等奖", "某某比赛三等奖"],
+      },
     },
   },
   // 工作经历
   workExperience: {
     title: "工作经历",
-    workExperience: [
+    info: [
       {
         cName: "某某有限公司", //公司名称
         pName: "平-面-设-计-师", //职业名称
@@ -170,16 +182,22 @@ export default {
   //项目经验
   projectExperience: {
     title: "项目经验",
-    projects: [
+    info: [
       {
-        imgs: [], //图片
+        imgs: [
+          "https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png",
+          "https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png",
+        ], //图片
         pName: "XXXXX项目", //项目名
         pdescribe:
           "这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明",
         pSkills: ["XXXXXX", "XXXXXX"],
       },
       {
-        imgs: [], //图片
+        imgs: [
+          "https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png",
+          "https://i.postimg.cc/tTspdfZk/QQ-20230210144214.png",
+        ], //图片
         pName: "XXXXX项目", //项目名
         pdescribe:
           "这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明这是一个细节说明",
@@ -190,6 +208,7 @@ export default {
   // 联系我
   contactMe: {
     title: "联系我",
-    // 定制想要收集的信息 ??
-  },
+  }
 };
+
+

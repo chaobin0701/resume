@@ -9,7 +9,7 @@
         class="row-span-3 col-span-2"
         v-into="'focus-in-expand'"
       ></public-c-mtitle>
-      <div class="animation-300" v-into="'fade-in-down'"
+      <div class="animation-300" v-into="'fade-in-right'"
       v-for="(item,index) in jobOrientation.info" :key="index"
       >
         <p class="text-xl font-bold">{{ item.jobName }}</p>
@@ -30,7 +30,7 @@
           v-for="(info, index) in basicInfo.info"
           :key="index"
           class="mr-[30px] animation-500"
-          v-into="'fade-in-down'"
+          v-into="'fade-in-right'"
         >
           <span class="text-weakenColor text-xs">{{ info.key }}</span>
           <p class="">{{ info.value }}</p>
@@ -48,7 +48,7 @@
           v-for="(info, index) in contactInformation.info"
           :key="index"
           class="mr-[30px] animation-500"
-          v-into="'fade-in-down'"
+          v-into="'fade-in-right'"
         >
           <span class="text-weakenColor text-xs">{{ info.key }}</span>
           <p class="">{{ info.value }}</p>
@@ -72,55 +72,5 @@ const props = defineProps({
 <style scoped>
 .title::before {
   @apply subscript-pInfo1;
-}
-.focus-in-expand {
-  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.fade-in-down {
-  -webkit-animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  animation: fade-in-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-}
-
-@keyframes fade-in-right {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
 }
 </style>

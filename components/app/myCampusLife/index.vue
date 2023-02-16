@@ -2,7 +2,7 @@
   <!-- 校园经历 -->
   <public-c-nav id="point-3" class="d-point">
     <template #left>
-      <public-c-mtitle text="校园经历"></public-c-mtitle>
+      <public-c-mtitle :text="title"></public-c-mtitle>
     </template>
     <template #right>
       <public-c-sectionTitle
@@ -16,9 +16,14 @@
       class="w-[45%] bg-pBlue rounded-[10px] p-[30px] grid grid-rows-4 grid-cols-3"
     >
       <div class="col-span-3">
-        <p class="relative text-lg font-bold title">在校成绩</p>
+        <p class="relative text-lg font-bold title" v-into="'fade-in-right'">{{ scores.cTitle }}</p>
       </div>
-      <div class="mr-[30px]" v-for="(score, index) in scores" :key="index">
+      <div
+        class="mr-[30px] animation-500"
+        v-for="(score, index) in scores.info"
+        :key="index"
+        v-into="'fade-in-down'"
+      >
         <span class="text-weakenColor text-xs">{{ score.des }}</span>
         <p class="font-bold">{{ score.explain }}</p>
       </div>
@@ -28,14 +33,17 @@
       class="w-[45%] bg-pYellow rounded-[10px] p-[30px] grid grid-rows-4 grid-cols-2"
     >
       <div class="col-span-2">
-        <p class="relative text-lg font-bold title">获得荣誉</p>
+        <p class="relative text-lg font-bold title" v-into="'fade-in-right'">{{ honor.cTitle }}</p>
       </div>
       <div class="mr-[30px] row-span-3">
-        <span class="text-weakenColor text-xs">{{ campusAwards.des }}</span>
+        <span class="text-weakenColor text-xs">{{
+          honor.campusAwards.des
+        }}</span>
         <ul class="space-y-[30px] mt-[10px]">
           <li
-            class="font-bold"
-            v-for="(item, index) in campusAwards.explain"
+          v-into="'fade-in-down'"
+            class="font-bold animation-500"
+            v-for="(item, index) in honor.campusAwards.explain"
             :key="index"
           >
             {{ item }}
@@ -44,12 +52,13 @@
       </div>
       <div class="mr-[30px] row-span-3">
         <span class="text-weakenColor text-xs">{{
-          competitionAwards.des
+          honor.competitionAwards.des
         }}</span>
         <ul class="space-y-[30px] mt-[10px]">
           <li
+            v-into="'fade-in-down'"
             class="font-bold"
-            v-for="(item, index) in competitionAwards.explain"
+            v-for="(item, index) in honor.competitionAwards.explain"
             :key="index"
           >
             {{ item }}
@@ -60,24 +69,12 @@
   </div>
 </template>
 
-<script setup lang="ts">
-// 成绩
-const scores = [
-  { des: "专业排名", explain: "第四" },
-  { des: "四级成绩", explain: "5XX" },
-  { des: "六级成绩", explain: "4XX" },
-  { des: "专业课成绩", explain: "优秀" },
-  { des: "手工课成绩", explain: "优秀" },
-];
-const campusAwards = {
-  des: "校园奖项",
-  explain: ["社会实践先进个人", "优秀学生干部", "三好学生"],
-};
-
-const competitionAwards = {
-  des: "比赛奖项",
-  explain: ["某某比赛三等奖", "某某比赛三等奖", "某某比赛三等奖"],
-};
+<script setup>
+const props = defineProps({
+  title: String,
+  scores: Object,
+  honor: Object,
+});
 </script>
 
 <style scoped>
